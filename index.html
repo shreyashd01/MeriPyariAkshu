@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Love Story</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffecf5; /* Light Pink background */
+            color: #333;
+        }
+
+        header {
+            text-align: center;
+            padding: 1em;
+        }
+
+        h1 {
+            font-size: 36px;
+            margin: 0;
+            display: inline-block;
+            position: relative;
+            color: #ff3399; /* Pink text */
+        }
+
+        h1 span {
+            display: block; /* Change from inline-block to block */
+            font-size: 18px;
+            margin-top: 5px;
+            color: #ff6699; /* Lighter Pink text */
+        }
+
+        h1::before,
+        h1::after {
+            content: '\2665'; /* Unicode heart character */
+            font-size: 48px;
+            color: #ff3399; /* Pink heart */
+            position: absolute;
+        }
+
+        h1::before {
+            left: 10px;
+            top: 0;
+        }
+
+        h1::after {
+            right: 10px;
+            top: 0;
+        }
+
+        section {
+            max-width: 100%;
+            margin: 20px 5px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 16px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #ff3399; /* Pink text */
+            font-size: 24px;
+            margin-top: 20px;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 16px;
+            margin-bottom: 10px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1em;
+            background-color: #ff3399; /* Pink footer */
+            color: #fff;
+            border-radius: 0 0 16px 16px;
+        }
+
+        /* Countdown timer */
+        #countdown {
+            font-size: 36px;
+            text-align: center;
+            margin-top: 20px;
+            color: #ff3399; /* Pink text */
+            position: relative;
+        }
+
+        #countdown span {
+            font-size: 24px;
+            color: #333; /* Dark text */
+            margin: 0 5px;
+        }
+
+        /* Completed Days Section */
+        #completed-days {
+            text-align: center;
+            margin-top: 20px;
+            color: #ff3399; /* Pink text */
+            font-size: 24px;
+        }
+
+        /* Falling Hearts Animation */
+        .falling-hearts-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 9999;
+        }
+
+        .falling-heart {
+            position: absolute;
+            display: block;
+            content: '❤'; /* Heart character */
+            color: #ff3399; /* Pink heart */
+            font-size: 20px;
+            animation: fall 5s linear infinite;
+        }
+
+        @keyframes fall {
+            0% {
+                transform: translateY(-100vh);
+            }
+            100% {
+                transform: translateY(100vh);
+            }
+        }
+
+        /* Play button styles */
+        #play-button {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            font-size: 18px;
+            background-color: #ff3399; /* Pink background */
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        #play-button:hover {
+            background-color: #ff1a66; /* Darker pink on hover */
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div id="heart"></div>
+        <h1>Our Love Story<span>Akshu's and Shreya's Personal Space</span></h1>
+    </header>
+
+    <section>
+        <!-- Falling Hearts Container -->
+        <div class="falling-hearts-container" id="falling-hearts"></div>
+
+        <div id="countdown"></div>
+        <script>
+            // Countdown timer
+            const targetDate = new Date('September 27, 2023').getTime();
+
+            function updateCountdown() {
+                const now = new Date().getTime();
+                const distance = targetDate - now;
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                document.getElementById('countdown').innerHTML = `
+                    <div id="heart"></div>
+                    ${days}<span>days</span> ${hours}<span>hours</span> ${minutes}<span>minutes</span> ${seconds}<span>seconds</span>`;
+            }
+
+            setInterval(updateCountdown, 1000);
+            updateCountdown(); // Initial update
+        </script>
+
+        <h2>Memorable Moments</h2>
+        <!-- ... Existing Slideshow Code ... -->
+        <!-- Slideshow -->
+<div class="slideshow-container">
+    <div class="mySlides fade">
+        <img src="/1.jpeg" alt="Romantic Image 1">
+    </div>
+
+    <div class="mySlides fade">
+        <img src="/2.jpeg" alt="Romantic Image 2">
+    </div>
+
+    <div class="mySlides fade">
+        <img src="/3.jpeg" alt="Romantic Image 2">
+    </div>
+
+    <div class="mySlides fade">
+        <img src="/4.jpeg" alt="Romantic Image 2">
+    </div>
+
+    <div class="mySlides fade">
+        <img src="/5.jpeg" alt="Romantic Image 2">
+    </div>
+
+    <div class="mySlides fade">
+        <img src="/6.jpeg" alt="Romantic Image 2">
+    </div>
+
+    <div class="mySlides fade">
+        <img src="/7.jpeg" alt="Romantic Image 2">
+    </div>
+
+
+    <div class="mySlides fade">
+        <img src="/8.jpeg" alt="Romantic Image 2">
+    </div>
+
+
+    <div class="mySlides fade">
+        <img src="/9.jpeg" alt="Romantic Image 2">
+    </div>
+
+    <div class="mySlides fade">
+        <img src="/0.jpeg" alt="Romantic Image 2">
+    </div>
+
+
+
+    <!-- Add more images as needed -->
+
+    <script>
+        // Slideshow
+        let slideIndex = 0;
+
+        function showSlides() {
+            let i;
+            const slides = document.getElementsByClassName("mySlides");
+
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+
+            slideIndex++;
+            if (slideIndex > slides.length) {
+                slideIndex = 1;
+            }
+
+            slides[slideIndex - 1].style.display = "block";
+            setTimeout(showSlides, 5000); // Change slide every 5 seconds
+        }
+
+        showSlides(); // Initial start
+    </script>
+</div>
+
+
+        <!-- Background Music -->
+        <audio id="audio" loop>
+            <!-- Replace 'your-audio-file.mp3' with the actual URL of your audio file -->
+            <source src="/song1.mp3" type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio>
+
+        <!-- Play button -->
+        <button id="play-button" onclick="toggleAudio()">Play</button>
+        <script>
+            // Play button functionality
+            const audio = document.getElementById('audio');
+
+            function toggleAudio() {
+                if (audio.paused) {
+                    audio.play();
+                } else {
+                    audio.pause();
+                }
+            }
+        </script>
+
+        <!-- Completed Days Section -->
+        <div id="completed-days"></div>
+        <script>
+            // Completed Days
+            const startDate = new Date('September 27, 2023').getTime();
+
+            function updateCompletedDays() {
+                const now = new Date().getTime();
+                const completedDays = Math.floor((now - startDate) / (1000 * 60 * 60 * 24));
+
+                document.getElementById('completed-days').innerText = ` ${completedDays} days together!`;
+            }
+
+            setInterval(updateCompletedDays, 1000 * 60 * 60 * 24); // Update every 24 hours
+            updateCompletedDays(); // Initial update
+        </script>
+
+    </section>
+    <!-- Lovely Message Section -->
+<div id="lovely-message" style="text-align: center; margin-top: 20px; font-size: 20px; color: #ff3399;"></div>
+
+<script>
+    // Lovely Message
+    const lovelyMessage = "In your eyes, I find a universe of warmth, and in your smile, I discover the magic that brightens my darkest days. Your laughter is my favorite melody, and your presence, my greatest comfort. With you, every moment feels like a cherished chapter in a beautiful love story, In your eyes... I found my paradise. 🌹";
+
+    function displayLovelyMessage() {
+        const messageContainer = document.getElementById('lovely-message');
+        let index = 0;
+
+        function typeMessage() {
+            if (index < lovelyMessage.length) {
+                messageContainer.innerHTML += `<span style="color: #ff3399;">${lovelyMessage.charAt(index)}</span>`;
+                index++;
+                setTimeout(typeMessage, 100); // Adjust typing speed (in milliseconds)
+            }
+        }
+
+        typeMessage();
+    }
+
+    // Trigger the lovely message display (you can adjust the timing as needed)
+    setTimeout(displayLovelyMessage, 10000); // Display message after 10 seconds
+</script>
+
+
+    <footer>
+        &copy; 2024 Our Love Story
+    </footer>
+
+    <script>
+        // Create falling hearts
+        function createFallingHeart() {
+            const heart = document.createElement('span');
+            heart.classList.add('falling-heart');
+            heart.style.left = Math.random() * window.innerWidth + 'px';
+
+            document.getElementById('falling-hearts').appendChild(heart);
+
+            // Remove the heart after animation ends
+            heart.addEventListener('animationiteration', () => {
+                heart.remove();
+            });
+        }
+
+        // Trigger falling hearts
+        setInterval(createFallingHeart, 500); // Adjust the interval as needed
+    </script>
+
+</body>
+</html>
